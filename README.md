@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# 🏏 PlayPulse: Multi-Sport Live Aggregator & Stats Hub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+PlayPulse is a premium, full-stack multi-sport live dashboard and athlete statistics hub. It aggregates real-time matches (live scores, upcoming fixtures, completed results) and global player performance logs directly from public feeds (ESPN, ESPN Cricinfo, and ScoresPro) and Wikipedia.
 
-## Available Scripts
+Developed using a state-of-the-art **React frontend** and an **Express.js backend**, PlayPulse is styled with a gorgeous, high-fidelity dark glassmorphic interface, micro-animations, and full mobile responsiveness.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Core Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. 📡 Live Global Match Aggregator (Multi-Sport Feed)
+* Queries the official, public **ESPN Scoreboard APIs** for Soccer (Premier League, La Liga, MLS) and Basketball (NBA) concurrently.
+* Scrapes live RSS feeds from **ESPN Cricinfo** for Cricket and **ScoresPro** for Tennis.
+* Automatically resolves dates, times, and stadium venues in local timezones.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. 📊 Player Match Performance Scorecards
+* Renders a sport-specific, detailed scorecard grid for every match:
+  * **Cricket 🏏**: Complete batting figures (runs, balls, 4s, 6s, strike rates) and bowling tables (overs, maidens, runs, wickets, economy rates) for both innings.
+  * **Football ⚽**: Goals, assists, shots on target, pass accuracy, cards, and match ratings.
+  * **Basketball 🏀**: Points, rebounds, assists, and field goals made/attempted.
+  * **Tennis 🎾 / Kabaddi 🤼 / Athletics 🏃**: Aces, raid/tackle points, and competition medals.
 
-### `npm test`
+### 3. 🏁 Match Officials & Referee Panels
+* Displays assigned field umpires, crew chiefs, and VAR referees deterministically for every match (e.g. *Richard Kettleborough (ENG)*, *Michael Oliver (ENG)*, etc.).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4. 🌍 Infinite Athlete Directory (Wikipedia Integration)
+* **Spotlight cards** for top stars (e.g. *Virat Kohli*, *Lionel Messi*, *Rohit Sharma*).
+* **See All Players**: Dynamically scrapes live Wikipedia Category archives (e.g. *Grand Slam tennis champions*, *Indian cricketers*, *NBA players*) to expand sport rosters on demand.
+* **Global OpenSearch**: Allows searching and generating profile summaries, bios, and seeded career stats tables for *any* historical athlete.
 
-### `npm run build`
+### 5. 🩹 Self-Healing API Port Listener
+* Automatically scans local ports (`4000-4004`) to establish connections between the React client and the API server, preventing failures due to port conflicts (`EADDRINUSE`).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tech Stack
+* **Frontend**: React.js (Create React App), React Icons, Framer Motion, Vanilla CSS.
+* **Backend**: Node.js, Express, Axios, Node-Fetch (ESM modules), dotenv.
+* **Data Sources**: ESPN APIs, Wikipedia Summary API, Cricinfo XML feeds, ScoresPro XML feeds.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## ⚙️ Quick Start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. Clone the Repository
+```bash
+git clone https://github.com/ShashankUpadhyay45/PlayPulse.git
+cd PlayPulse
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Launch the Development Environment
+We have created a double-click launcher batch file to clean node caches and start both servers concurrently in separate command logs:
+```bash
+# Simply run the bat launcher on Windows:
+.\run.bat
+```
+* **Express Backend**: Running on [http://localhost:4000](http://localhost:4000) (auto-incrementing if busy).
+* **React Frontend**: Running on [http://localhost:3001](http://localhost:3001).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📦 Deployment Setup
+* **Backend (Render)**: Set root directory to `server`, runtime to `Node`, build command to `npm install`, and start command to `node index.js`.
+* **Frontend (Vercel)**: Set root directory to `client`, framework to `Create React App`, and configure `REACT_APP_API_URL` pointing to your backend service URL.

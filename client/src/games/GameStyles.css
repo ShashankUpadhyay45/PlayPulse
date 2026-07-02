@@ -1,0 +1,105 @@
+.game-container {
+  text-align: center;
+  margin: 30px auto;
+  max-width: 600px;
+}
+.tictactoe-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 8px;
+  justify-content: center;
+}
+.tictactoe-board button {
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+  background: #18283d;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.tictactoe-board button:hover {
+  background: #1e90ff;
+}
+.snake-board {
+  margin: 20px auto;
+  background: #111;
+  border: 4px solid #0b63d6;
+  width: fit-content;
+}
+.cell {
+  width: 20px;
+  height: 20px;
+  background: #222;
+}
+.cell.snake {
+  background: #0b63d6;
+}
+.cell.food {
+  background: #e63946;
+}
+.reset-btn {
+  background: #0b63d6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.rules {
+  margin-top: 20px;
+  text-align: left;
+  background: #f1f5f9;
+  padding: 15px;
+  border-radius: 10px;
+}
+.rules h3 {
+  margin-top: 0;
+}
+.rps-buttons button {
+  background: #18283d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 8px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.rps-buttons button:hover {
+  background: #1e90ff;
+}
+.grid2048 {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  gap: 6px;
+  justify-content: center;
+  background: #111;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+.tile {
+  width: 70px;
+  height: 70px;
+  background: #222;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+.tile.t2 { background: #fef08a; color: #111; }
+.tile.t4 { background: #fde047; color: #111; }
+.tile.t8 { background: #facc15; color: #111; }
+.tile.t16 { background: #eab308; color: white; }
+.tile.t32 { background: #ca8a04; color: white; }
+.tile.t64 { background: #a16207; color: white; }
+.tile.t128 { background: #854d0e; color: white; }
+.tile.t256 { background: #713f12; color: white; }
+.tile.t512 { background: #581c87; color: white; }
+.tile.t1024 { background: #6d28d9; color: white; }
+.tile.t2048 { background: #9333ea; color: white; }

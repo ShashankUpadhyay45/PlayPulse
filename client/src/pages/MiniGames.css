@@ -1,0 +1,252 @@
+.minigames {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.mini-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.mini-grid button {
+  background-color: var(--nav);
+  color: white;
+  padding: 16px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.mini-grid button:hover {
+  background-color: var(--accent);
+  transform: scale(1.05);
+}
+
+.back-btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+/* Rock–Paper–Scissors */
+.rps-game .choices {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.rps-game .choices button {
+  background-color: #18283d;
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.rps-game .choices button:hover {
+  background-color: #2563eb;
+  transform: scale(1.1);
+}
+
+.rps-game .result {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+/* 2048 Board */
+.board {
+  display: grid;
+  grid-template-rows: repeat(4, 80px);
+  gap: 8px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  gap: 8px;
+}
+
+.tile {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.tile-2 { background: #eee4da; }
+.tile-4 { background: #ede0c8; }
+.tile-8 { background: #f2b179; color: white; }
+.tile-16 { background: #f59563; color: white; }
+.tile-32 { background: #f67c5f; color: white; }
+.tile-64 { background: #f65e3b; color: white; }
+.tile-128 { background: #edcf72; }
+.tile-256 { background: #edcc61; }
+.tile-512 { background: #edc850; }
+.tile-1024 { background: #edc53f; }
+.tile-2048 { background: #edc22e; }
+
+/* Tic Tac Toe */
+.tictactoe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 8px;
+  justify-content: center;
+  margin: 20px auto;
+}
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #0b1622;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.cell:hover {
+  background-color: #2563eb;
+}
+.reset-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Memory Match */
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.memory-card {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: #18283d;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+.memory-card.flipped {
+  transform: rotateY(180deg);
+}
+.memory-card .front,
+.memory-card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.memory-card .front {
+  transform: rotateY(180deg);
+}
+.memory-card .back {
+  background-color: #0b63d6;
+}
+/* 🎮 Mini Games Section */
+.minigames {
+  text-align: center;
+  padding: 60px 20px;
+  color: #111;
+}
+
+.minigames .subtitle {
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.mini-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.mini-grid button {
+  background: var(--nav);
+  color: white;
+  font-size: 18px;
+  padding: 16px 30px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.mini-grid button:hover {
+  background: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* 🌟 Reset Button Styling */
+.reset-btn {
+  background: #18283d;
+  color: #fff;
+  border: 2px solid #1e90ff;
+  border-radius: 10px;
+  padding: 12px 28px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.25);
+}
+
+.reset-btn:hover {
+  background: #1e90ff;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 10px 28px rgba(30, 144, 255, 0.4);
+}
+
+.reset-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(30, 144, 255, 0.3);
+}
+
+/* 🌙 Dark mode variant */
+.app.dark .reset-btn {
+  background: #1b263b;
+  border-color: #4ca3ff;
+  box-shadow: 0 6px 16px rgba(76, 163, 255, 0.25);
+}
+
+.app.dark .reset-btn:hover {
+  background: #4ca3ff;
+  color: #0b1220;
+}

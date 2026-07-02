@@ -1,0 +1,48 @@
+.live-widget {
+  background: white;
+  padding: 20px;
+  margin-bottom: 35px;
+  border-radius: 14px;
+  box-shadow: 0 5px 22px rgba(0,0,0,0.08);
+}
+
+.live-title {
+  margin: 0 0 15px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.live-card {
+  background: #f1f5f9;
+  padding: 14px 20px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+}
+
+.teams {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.score {
+  margin-top: 6px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #0b63d6;
+}
+
+.status {
+  margin-top: 4px;
+  font-size: 14px;
+  background: #ef4444;
+  color: white;
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.no-live {
+  color: #555;
+  font-size: 15px;
+}

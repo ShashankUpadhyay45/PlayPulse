@@ -1,10 +1,11 @@
-// client/src/pages/About.js
 import React from "react";
+
 export default function About() {
   return (
-    <section className="contact">
+    <div className="page">
       <h2>About PlayPulse</h2>
-      <p>PlayPulse — Multi-sport scoreboard and mini-games hub. Built with React & Node.</p>
-    </section>
+      <p>PlayPulse — unified scoreboard and mini-games hub. Built for demo & learning purposes.</p>
+      <p>Developer: Shashank Upadhyay</p>
+    </div>
   );
 }

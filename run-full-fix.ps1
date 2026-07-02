@@ -51,3 +51,10 @@ Start-Process powershell -ArgumentList "cd 'client'; npm start" -WindowStyle Nor
 # --- Done ---
 Write-Host "`n✅ Setup complete! Your project should open in the browser shortly." -ForegroundColor Cyan
 Write-Host "If it doesn't, open manually: http://localhost:3000" -ForegroundColor Green
+
+
+192 
+193
+00245
+283
+280
