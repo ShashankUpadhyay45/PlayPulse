@@ -28,6 +28,13 @@ app.use(
 app.use(express.json());
 
 /* =======================
+   BASIC SYSTEM HEALTH STATUS
+======================= */
+app.get("/api", (req, res) => {
+  res.json({ ok: true, msg: "PlayPulse Multi-Sport API running ✅" });
+});
+
+/* =======================
    REAL-TIME RSS SPORTS PARSER (CRICINFO & SCORESPRO FALLBACK)
 ======================= */
 async function getRealMatchesFromRSS(sport) {
